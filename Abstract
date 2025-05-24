@@ -1,3 +1,21 @@
-## ABSTRACT
+## 🌍 Abstract: Semantic Segmentation of Hyperspectral Satellite Data (DESIS)
 
-Remote sensing plays a crucial role in Earth and environmental sciences, providing valuable data for monitoring and understanding our planet. This technology allows for the collection of spatial information from a distance, enabling researchers to study large areas efficiently. Hyperspectral imaging is an advanced form of remote sensing that collects data across hundreds of narrow, contiguous spectral bands. Hyperspectral image classification is crucial in remote sensing as it allows for accurate segmentation of land cover using sophisticated machine learning methods. This research investigates the performance of two deep learning architectures, namely UNet and the Multi-Layer Perceptron (MLP), in the context of semantic segmentation for hyperspectral images captured by DESIS. The UNet architecture, built upon a ResNet34 backbone, effectively captures spatial characteristics utilizing an encoder-decoder framework. Meanwhile, the MLP focuses on pixel-specific spectral data, extracting distinct features across 235 hyperspectral bands. An extensive collection of stratified hyperspectral samples was used for both training and evaluation, resulting in high classification accuracy for various land cover categories. Comprehensive quantitative and qualitative evaluations, incorporating classification reports, confusion matrices, and segmentation visualizations, reveal both the advantages and drawbacks of each method. The result indicates that deep learning models, such as the UNet, are capable of hyperspectral image classification with 92\% accuracy in capturing spatial features with nominal overfitting. Our baseline model, a simple MLP did not produce acceptable accuracy across all the images, working well for some while doing the opposite for others probably due to the inaccuracies present in the ground truth mask used for training. Our framework and the associated results have the potential to contribute towards efficient processing of hyperspectral images.
+Remote sensing is a cornerstone of modern Earth and environmental sciences, enabling large-scale analysis of our planet through spatial data captured from a distance. Among the most powerful tools in this domain is **hyperspectral imaging**, which records data across **hundreds of contiguous spectral bands**, offering unparalleled insights into surface-level variations.
+
+This project explores the application of **deep learning and unsupervised clustering** for **semantic segmentation** on hyperspectral satellite imagery captured by the **DESIS sensor**. We compare the performance of three approaches:
+
+- 🧠 **UNet (ResNet34 backbone)** — An encoder-decoder model that excels at learning spatial features across entire image regions.
+- 🔬 **Multi-Layer Perceptron (MLP)** — Focuses on spectral features at the pixel level across 235 bands.
+- 📊 **KMeans Clustering** — An unsupervised learning approach used to cluster pixel spectral signatures, demonstrating strong baseline accuracy without the need for labeled data.
+
+We trained and evaluated the models on a stratified set of hyperspectral samples. Evaluation methods included **classification reports**, **confusion matrices**, and **segmentation visualizations** for quantitative and qualitative insights.
+
+### 📈 Key Findings:
+- **UNet achieved 92% accuracy**, effectively segmenting land cover categories with minimal overfitting.
+- The **MLP baseline** showed variable performance—strong in isolated cases but limited by inconsistencies in the ground truth masks.
+- **KMeans clustering** produced **surprisingly good accuracy** for an unsupervised method, effectively grouping spectrally distinct classes like vegetation, water, and urban surfaces.
+
+---
+
+🧪 **Impact**  
+This work demonstrates how deep learning and clustering can complement each other in hyperspectral image analysis. Our framework contributes toward scalable, efficient remote sensing pipelines—powering future applications in **environmental monitoring**, **agriculture**, and **disaster response**.
