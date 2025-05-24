@@ -8,3 +8,5 @@ This project explores the application of deep learning for **semantic segmentati
 📊 **Models**: UNet | MLP | KMeans Clustering
 🎯 **Best Accuracy**: 92% with UNet
 
+📌 **Note:**  
+This repository contains a high-level overview of the project. A more detailed description, including code and dataset annotations, is currently limited due to an ongoing **publication submission**.
